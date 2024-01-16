@@ -35,10 +35,9 @@ class ShoppingCart:
         print('\nREMOVE ITEM FROM CART', end='\n')
         string = str(input('Enter name of item to remove:\n'))
         i = 0
-        for item in self.cart_items:
+        for i, item in enumerate(self.cart_items):
             if (item.item_name == string):
                 del self.cart_items[i]
-                i += 1
                 flag = True
                 break
             else:
